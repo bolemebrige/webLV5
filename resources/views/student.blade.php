@@ -13,7 +13,7 @@ function myfunction(clicked_id){
 else{
     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 }
-var PageToSendTo = "http://localhost:8000/editProject?";
+var PageToSendTo = "http://localhost:8000/PickTask?";
 var MyVariable = clicked_id;
 var VariablePlaceholder = "id=";
 var UrlToSend = PageToSendTo + VariablePlaceholder + MyVariable;
@@ -36,7 +36,7 @@ $Tasks = \App\Task::all();
 
 <div class="container-fluid">
   
-
+<h2> Odaberi rad </h2>
 
   <div class="row">
 

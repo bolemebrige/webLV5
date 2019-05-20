@@ -29,10 +29,13 @@ Route::get('locale/{locale}', function ($locale){
     return redirect()->back();
 });
 Route::get('/InsertTask', 'InsertTaskController@InsertTask');
-Route::get('/CheckRole', 'RoleController@CheckRole');
 
-Route::get('/profesor', function () {
-    return view('professor');}
+Route::get('/CheckRole', 'RoleController@CheckRole');
+Route::get('/PickTask', 'PickTaskController@PickTask')->middleware('auth');
+
+
+Route::get('/student', function () {
+    return view('student');}
 
 );
 

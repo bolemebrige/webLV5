@@ -19,6 +19,7 @@ class CreateTasksTable extends Migration
           $table->string('naziv_eng');
           $table->string('zadatak');          
              $table->string('studij');
+              $table->string('mentor_id');
         });
     }
 

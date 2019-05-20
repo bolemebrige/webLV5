@@ -13,14 +13,15 @@ class Rolecontroller extends Controller{
 public function CheckRole(){
 
 
-$logedRole=Auth::role();
 
+$user = Auth::user();
+$loggedRole=$user->role;
 
 if($loggedRole == 'nastavnik'){
 
 	return view('home');
 }
-else if($loggedRole == 'student'){
+elseif($loggedRole == 'student'){
 
 return view('student');
 
@@ -28,14 +29,13 @@ return view('student');
 
 
 
-$locale = App::getLocale();
+//$locale = App::getLocale();
 
-if (App::isLocale('en')) {
-    //
-	return view('home/en');
+/*    //
+	return view('home/hr');
 
 }
-
+*/
 
 
 }
